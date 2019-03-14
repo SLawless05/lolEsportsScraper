@@ -35,9 +35,7 @@ router.get("/scrape", function (req, res) {
         });
 });
 
-// *** Routes to export to server.js *** //
-
-// Route to get all Articles from the db.
+// *** Route to get all Articles from the db.
 router.get("/", function (req, res) {
     db.Article.find({}).limit(20)
         .then(function (scrapedData) {
@@ -50,7 +48,7 @@ router.get("/", function (req, res) {
         });
 });
 
-// Route to save an Article.
+// *** Route to save an Article.
 router.put("/saved/:id", function (req, res) {
     db.Article.update(
         { _id: req.params.id },
@@ -64,7 +62,7 @@ router.put("/saved/:id", function (req, res) {
         });
 });
 
-// Route to drop the Articles collection.
+// *** Route to drop the Articles collection.
 router.delete("/drop-articles", function (req, res, next) {
     db.Article.remove({}, function (err) {
         if (err) {

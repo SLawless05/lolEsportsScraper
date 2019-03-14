@@ -15,11 +15,11 @@ var ArticleSchema = new Schema({
     },
     summary: {
         type: String,
-        required: true
+        required: false
     },
     image: {
         type: String,
-        required: true
+        required: false
     },
     // `saved` is a boolean used to display the article in the raw, scraped section, or the saved articles.
     saved: {

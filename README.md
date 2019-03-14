@@ -1,0 +1,1 @@
+This is an app which simply scrapes the lolesports subreddit (old reddit) for posts about league of legends esports.
