@@ -73,7 +73,7 @@ lRed = #ff4d4d
 }
 
 .warning {
-    color: rgb(238, 12, 12);
+    color: #ff3838;
     font-weight: bolder;
 }
 
@@ -83,7 +83,7 @@ lRed = #ff4d4d
 }
 
 .panel-heading {
-    background-color: rgb(52,58,64);
+    background-color: #7158e2;
     border: 1px solid #fff;
     border-radius: 5px;
     margin-bottom: 10px;

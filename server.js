@@ -6,20 +6,12 @@ var mongoose = require("mongoose");
 var request = require("request");
 
 // *** Database setup *** //
-// Use the deployed or local database.
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/articleScraper";
-// Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
-// Connect to the Mongo DB
 mongoose.connect(MONGODB_URI);
-// Connect to the Mongo DB (old localhost)
-// mongoose.connect("mongodb://localhost/mongo-scraper");
 
-// Initialize the app with Express.
 var app = express();
 
-// *** Middleware *** //
-// Use morgan logger for logging requests
 app.use(logger("dev"));
 
 // Use body-parser for handling form submissions
@@ -29,7 +21,7 @@ app.use(bodyParser.urlencoded({
 // parse application/json
 app.use(bodyParser.json());
 
-// Use express.static to serve the public folder as a static directory
+//get public static
 app.use(express.static("public"));
 
 // Set Handlebars.
@@ -40,8 +32,8 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 
 // Import and use routes.
-var scraperRoutes = require("./controllers/controller.js");
-var savedRoutes = require("./controllers/saved-articles.js");
+var scraperRoutes = require("./routes/router.js");
+var savedRoutes = require("./routes/saved-article-router.js");
 app.use(scraperRoutes, savedRoutes);
 
 // Start the Server
