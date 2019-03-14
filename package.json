@@ -1,5 +1,5 @@
 {
-    "name": "mongo-scraper",
+    "name": "lolesports-scraper",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
@@ -8,7 +8,7 @@
         "start": "node server.js",
         "watch": "nodemon server.js"
     },
-    "author": "Matt King",
+    "author": "",
     "license": "ISC",
     "dependencies": {
         "axios": "^0.16.2",
